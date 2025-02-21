@@ -1,6 +1,7 @@
-# Guia Docker, Angular y pruebas
+# Guía Docker, Angular y pruebas
 **1. Instalar Docker:**  
-Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la documentación oficial de Docker para instalarlo según tu sistema operativo.
+Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la documentación oficial de Docker para instalarlo según tu sistema operativo.  
+**2.
 
 **Creación del Menu con bash:**  
 En el contenedor colocar el siguiente código para crear un menu con bash.  
