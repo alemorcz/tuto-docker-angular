@@ -2,7 +2,8 @@
 **1. Instalar Docker:**  
 Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la documentación oficial de Docker para instalarlo según tu sistema operativo.
 
-
+** Creación del Menu con bash:**  
+En el contenedor colocar el siguiente código para crear un menu con bash.  
 ```bash
 #!/bin/bash
 
@@ -48,4 +49,28 @@ while true; do
     esac
     read -p "Presione Enter para continuar..."
 done
+```
+
+
+```bash
+#!/bin/bash
+echo "Hola Mundo!"
+```
+
+
+```
+const { execSync } = require("child_process");
+const fs = require("fs");
+
+describe("Pruebas para hola.sh", () => {
+    test("El archivo hola.sh debe existir", () => {
+        expect(fs.existsSync("/hola.sh")).toBe(true);
+    });
+
+    test("El script debe imprimir 'Hola Mundo!'", () => {
+        const output = execSync("/hola.sh").toString().trim();
+        expect(output).toBe("Hola Mundo!");
+    });
+});
+
 ```
