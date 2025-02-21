@@ -2,7 +2,7 @@
 **1. Instalar Docker:**  
 Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la documentación oficial de Docker para instalarlo según tu sistema operativo.
 
-** Creación del Menu con bash:**  
+**Creación del Menu con bash:**  
 En el contenedor colocar el siguiente código para crear un menu con bash.  
 ```bash
 #!/bin/bash
