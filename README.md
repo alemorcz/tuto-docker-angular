@@ -47,8 +47,8 @@ docker start ubuntu-container
 docker exec -it ubuntu-container bash
 ````
 
-**Creación del Menu con bash:**  
-En el contenedor colocar el siguiente código para crear un menu con bash.  
+**8. Creación del Menú con bash:**  
+En el contenedor colocar el siguiente código para crear un menu con bash. El archivo nombralo menu.sh.  
 ```bash
 #!/bin/bash
 
@@ -95,6 +95,21 @@ while true; do
     read -p "Presione Enter para continuar..."
 done
 ```
+**9. Permisos de Ejecución:**
+Para poder ejecutar el script, debes darle permisos de ejecución. Ejecuta el siguiente comando en la terminal:
+```
+chmod +x menu.sh
+```
+Esto permitirá que el script sea ejecutable.
+
+**10. Ejecutar el script**
+Para ejecutar el script, simplemente escribe el siguiente comando en la terminal:
+```
+./menu.sh
+```
+Esto mostrará el menú interactivo en la terminal y te permitirá seleccionar las opciones disponibles.
+
+**PASOS PARA QUE EL MENÚ TENGA INTERACCIÓN**
 
 
 ```bash
