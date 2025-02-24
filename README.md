@@ -109,14 +109,15 @@ Para ejecutar el script, simplemente escribe el siguiente comando en la terminal
 ```
 Esto mostrará el menú interactivo en la terminal y te permitirá seleccionar las opciones disponibles.
 
-**PASOS PARA QUE EL MENÚ TENGA INTERACCIÓN**
-
-
-```bash
-#!/bin/bash
-echo "Hola Mundo!"
+**MENÚ CON INTERACCIÓN**
+**Opción 1. Proyecto Angular**
+Esta opción es para ejecutar el proyecto Angular, pero primero hay que crear uno:
 ```
-
+ng new proyecto-angular
+cd proyecto-angular
+```
+**Opción 2. Pruebas unitarias**
+Dentro del contenedor crea un script hola.test.spec.js para realizar las pruebas del archivo hola.sh, este script evaluará que exista el documento y comparará el texto dentro.
 
 ```javascript
 const { execSync } = require("child_process");
@@ -134,3 +135,12 @@ describe("Pruebas para hola.sh", () => {
 });
 
 ```
+**Opción 3. Hola Mundo**
+Dentro del contenedor, crea un script hola.sh con el siguiente texto, este será mandado a llamar desde el menú de opciones.
+
+```bash
+#!/bin/bash
+echo "Hola Mundo!"
+```
+
+
