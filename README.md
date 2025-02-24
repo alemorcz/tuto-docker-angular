@@ -11,14 +11,14 @@ En el contenedor colocar el siguiente código para crear un menu con bash.
 while true; do
     clear
     echo "============================="
-    echo "       MEN ^z PRINCIPAL        "
+    echo "       MENÚ PRINCIPAL        "
     echo "============================="
     echo "1. Proyecto Angular"
     echo "2. Pruebas Unitarias"
     echo "3. Hola Mundo"
     echo "4. Salir"
     echo "============================="
-    read -p "Seleccione una opci  n: " opcion
+    read -p "Seleccione una opción: " opcion
 
     case $opcion in
         1)
@@ -37,15 +37,15 @@ while true; do
             if [ -f "./hola.sh" ]; then
                         ./hola.sh
             else
-                echo "El script hola.hs no existe en la ruta actual."
+                echo "El script hola.sh no existe en la ruta actual."
             fi
             ;;
         4)
-            echo "Saliendo del men  ..."
+            echo "Saliendo del menú..."
             exit 0
             ;;
         *)
-            echo "Opci  n no v  lida. Intente nuevamente."
+            echo "Opción no válida. Intente nuevamente."
             ;;
     esac
     read -p "Presione Enter para continuar..."
