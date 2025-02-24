@@ -1,7 +1,51 @@
 # Guía Docker, Angular y pruebas
 **1. Instalar Docker:**  
-Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la documentación oficial de Docker para instalarlo según tu sistema operativo.  
-**2.
+Asegúrate de tener Docker instalado en tu sistema. Puedes seguir la [Documentación oficial de Docker](https://docs.docker.com/get-started/get-docker/) para instalarlo según tu sistema operativo.  
+**2. Descarga la imagen de Ubuntu:**
+Ejecuta el siguienter comando para descargar la imagen oficial de Ubuntu:
+```
+docker pull ubuntu
+```
+***3. Crear un contenedor de Ubuntu:** 
+Ejecuta el siguiente comando para crear un contenedor de Ubuntu:
+1. La primera opción es para crearlo sin puerto.
+2. La segunda opción es para crearlo con puerto y ayuda si se implementa un proyecto angular dentro del contenedor.
+```
+ docker run -it --name ubuntu-container ubuntu
+ docker run -it -p 4200:4200 --name ubuntu-container ubuntu bash
+ ```
+ - -it: Permite interactuar con el contenedor.
+ - --name: Asigna un nombre al contenedor.
+
+**4. Configurar el contenedor de Ubuntu:** 
+Una vez dentro del contenedor, actualiza el sistema y configura las herramientas necesarias:
+```bash
+apt update
+apt upgrade
+apt install nano
+apt install curl
+apt install wget
+apt install git
+apt install -y nodejs npm
+npm install -g @angular/cli
+apt install -y python3 python3-pip
+```
+**5. Salir del contenedor de Ubuntu:** 
+Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
+```bash
+exit
+```
+**6. Guardar los cambios en una nueva imagen:** 
+Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
+```bash
+ docker stop ubuntu-container
+```
+**7. Entrar de nuevo al contendor**
+Si saliste del contenedor de Ubuntu, puede singresar de nuevo usando el siguiente comando:
+```bash
+docker start ubuntu-container
+docker exec -it ubuntu-container bash
+````
 
 **Creación del Menu con bash:**  
 En el contenedor colocar el siguiente código para crear un menu con bash.  
